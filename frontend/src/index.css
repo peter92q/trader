@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fjalla+One&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #050205;
+}
+
+.font-audiowide {
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 2px;
+}
+
+.rotate-text {
+  transform: rotate(-90deg);
+  background-color: #050205;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.purple__gradient {
+  background: linear-gradient(90deg, #5a0058 0%, #560155 100%);
+  filter: blur(700px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+.bg-effect{
+  background-image: url('/model.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+
+.responsive-text {
+  font-size: clamp(20px, 3vw, 35px);
+}
+
+.responsive-text2 {
+  font-size: clamp(40px, 5vw, 60px);
+}
+
+.responsive-text3 {
+  font-size: calc(25px + 0.5vw);
+}
+
+.responsive-text4 {
+  font-size: clamp(10px, 3vw, 20px);
+}
+
+.responsive-text5 {
+  font-size: clamp(10px, 3vw, 15px);
+}
+
+/*live prices*/
+.responsive-text6 {
+  font-size: clamp(14px, 1.3vw, 34px);
+}
+.responsive-text6small {
+  font-size: clamp(9px, 1vw, 25px);
+}
+@media (min-width: 3840px) {
+  .responsive-text6 {
+    font-size: 60px; 
+  }
+  .responsive-text6small {
+    font-size: 37px; 
+  }
+}
+/****************/
+
+/*remove built-in input styles*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#customInput:focus {
+  outline: none;
+}
+/*end of built-in input styles*/
+
+/* Customize scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Background color of the scrollbar track */
+}
+
+/* Customize scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #920d73; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners of the scrollbar thumb */
+}
+
+/* Customize scrollbar arrows (up and down buttons) */
+::-webkit-scrollbar-button {
+  background-color: #000000; /* Color of the scrollbar arrows */
+}
+
+/* Customize scrollbar corner (the intersection of vertical and horizontal scrollbars) */
+::-webkit-scrollbar-corner {
+  background-color: #000000; /* Background color of the scrollbar corner */
+}
+
+/*sell button*/
+
+.sell-button .icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  animation: icon-animation 0.5s ease-in;
+}
+
+@keyframes icon-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+}
+
+.soldanimate {
+  animation: shake-animation 0.5s;
+  animation-iteration-count: 1; 
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*end of sell*/
+
+.shimmer {
+  color: rgb(255, 255, 255);
+  display: block;
+  background: rgba(58, 57, 57, 0.514);
+  -webkit-mask: linear-gradient(-60deg, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) 70%) right/500% 100%; 
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+  font-size: 50px;
+}
+
+@keyframes shimmer {
+  100% { -webkit-mask-position: left }
+}
